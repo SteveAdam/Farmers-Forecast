@@ -2,7 +2,7 @@
 
 A modern React + Vite weather dashboard app that integrates with the **WeatherAI Weather API**. Search any location, get real-time weather conditions, 7-day forecasts, and AI-generated summaries to help farmers make better decisions.
 
-**Live demo:** _add your deployed URL here after deploying_
+**Live demo:** https://farmers-forecasts-d1fd68.netlify.app/
 
 ## Features
 
