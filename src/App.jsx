@@ -9,8 +9,8 @@ import Forecast from './components/Forecast'
 import SavedLocations from './components/SavedLocations'
 import './index.css'
 
-const WEATHER_API = "https://api.weather-ai.co/v1/weather"
-const FORECAST_API = "https://api.weather-ai.co/v1/forecast"
+const WEATHER_API = "/api/weather"
+const FORECAST_API = "/api/forecast"
 
 export default function App() {
     const [apiKey, setApiKey] = useState('')
@@ -43,10 +43,10 @@ export default function App() {
         try {
             const [weatherRes, forecastRes] = await Promise.all([
                 fetch(`${WEATHER_API}?lat=${lat}&lon=${lon}&ai=true`, {
-                    headers: { Authorization: `Bearer ${apiKey}` }
+                    headers: { 'x-api-key': apiKey }
                 }),
                 fetch(`${FORECAST_API}?lat=${lat}&lon=${lon}&days=7&ai=true`, {
-                    headers: { Authorization: `Bearer ${apiKey}` }
+                    headers: { 'x-api-key': apiKey }
                 })
             ])
 
